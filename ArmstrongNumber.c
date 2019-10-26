@@ -28,15 +28,24 @@ int main()
 
     int sum = 0;
     int temp;
+    int input_dummy = input;
     for (int i = 0; i < counter; i++)
     {
-        temp = input % 10;
+        temp = input_dummy % 10;
         sum = sum + Power(temp ,counter);
-        input = input  / 10;
+        input_dummy = input_dummy  / 10;
     }
 
-    printf("%d" ,sum);
+    // printf("input is %d , sum is  %d \n" ,input ,)
 
+    if (sum == input)
+    {
+        printf("This number can be Armstrong number");
+    }
+    else
+    {
+        printf("This number cannot be Armstrong number");
+    }
 
     return 0;
 }
